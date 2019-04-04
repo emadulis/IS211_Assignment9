@@ -13,7 +13,7 @@ soup = BeautifulSoup(page.read(), "lxml")
 
 def Stock_price():
     """This function will dump apple stock price for last 3 months"""
-    rows = soup.tbody.find_all('tr')
+    rows = soup.find_all('tr')
     for row in rows:
         try:
             date = row.find_all('td')[0].text.strip()
